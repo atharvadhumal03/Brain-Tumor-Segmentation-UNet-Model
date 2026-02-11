@@ -6,11 +6,12 @@ from glob import glob
 
 
 class BrainMRIDataset(Dataset):
-    def __init__(self, data_path, transform=None):
+    def __init__(self, data_path, transform=None, patient_list=None):
         """
         Args:
             data_path: Path to the kaggle_3m folder
             transform: Optional transforms to apply
+            patient_list: Optional list of patient IDs to include
         """
         self.data_path = data_path
         self.transform = transform
@@ -18,7 +19,11 @@ class BrainMRIDataset(Dataset):
         # Get all patient folders
         patient_folders = sorted(glob(os.path.join(data_path, 'TCGA*')))
         
-        # Lists to collect all image-mask pairs
+        # Filter by patient_list if provided
+        if patient_list is not None:
+            patient_folders = [f for f in patient_folders if os.path.basename(f) in patient_list]
+        
+        # Collect all image-mask pairs
         self.image_paths = []
         self.mask_paths = []
         
