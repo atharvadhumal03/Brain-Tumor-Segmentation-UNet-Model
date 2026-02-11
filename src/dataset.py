@@ -48,7 +48,7 @@ class BrainMRIDataset(Dataset):
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
         
         # Normalize mask to 0 and 1
-        mask = mask / 255.0
+        mask = (mask / 255.0).astype(np.float32)
         
         # Apply transforms if any
         if self.transform:
