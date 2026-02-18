@@ -45,10 +45,10 @@ class BrainMRIDataset(Dataset):
         mask = cv2.imread(self.mask_paths[idx], cv2.IMREAD_GRAYSCALE)
         
         # Convert BGR to RGB
-        image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+        image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB) # type: ignore
         
         # Normalize mask to 0 and 1
-        mask = (mask / 255.0).astype(np.float32)
+        mask = (mask / 255.0).astype(np.float32) # type: ignore
         
         # Apply transforms if any
         if self.transform:
