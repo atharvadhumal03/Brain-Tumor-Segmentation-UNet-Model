@@ -2,3 +2,6 @@ myVenv/
 data/
 .DS_Store
 src/__pycache__/
+logs/
+*.out
+*.err
