@@ -1,0 +1,15 @@
+/home/dhumal.a/.local/lib/python3.12/site-packages/albumentations/check_version.py:147: UserWarning: Error fetching version info <urlopen error [Errno 101] Network is unreachable>
+  data = fetch_version_info()
+Traceback (most recent call last):
+  File "/home/dhumal.a/brain_seg_hpc/train.py", line 62, in <module>
+    model = smp.Unet(
+            ^^^^^^^^^
+  File "/home/dhumal.a/.local/lib/python3.12/site-packages/segmentation_models_pytorch/base/hub_mixin.py", line 153, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dhumal.a/.local/lib/python3.12/site-packages/segmentation_models_pytorch/decoders/unet/model.py", line 132, in __init__
+    self.encoder = get_encoder(
+                   ^^^^^^^^^^^^
+  File "/home/dhumal.a/.local/lib/python3.12/site-packages/segmentation_models_pytorch/encoders/__init__.py", line 112, in get_encoder
+    raise KeyError(
+KeyError: "Wrong pretrained weights `None` for encoder `resnet50`. Available options are: ['imagenet', 'ssl', 'swsl']"

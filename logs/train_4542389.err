@@ -1,0 +1,159 @@
+/home/dhumal.a/.local/lib/python3.12/site-packages/albumentations/check_version.py:147: UserWarning: Error fetching version info <urlopen error [Errno 99] Cannot assign requested address>
+  data = fetch_version_info()
+/home/dhumal.a/.local/lib/python3.12/site-packages/segmentation_models_pytorch/encoders/__init__.py:136: UserWarning: Error loading resnet50 `imagenet` weights from Hugging Face Hub, trying loading from original url...
+  warnings.warn(message, UserWarning)
+Traceback (most recent call last):
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/site-packages/urllib3/connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/site-packages/urllib3/connectionpool.py", line 404, in _make_request
+    self._validate_conn(conn)
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1061, in _validate_conn
+    conn.connect()
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/site-packages/urllib3/connection.py", line 363, in connect
+    self.sock = conn = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/site-packages/urllib3/connection.py", line 179, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPSConnection object at 0x149a1721a720>, 'Connection to huggingface.co timed out. (connect timeout=10)')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/site-packages/requests/adapters.py", line 644, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/site-packages/urllib3/connectionpool.py", line 802, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/site-packages/urllib3/util/retry.py", line 594, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /smp-hub/resnet50.imagenet/resolve/00cb74e366966d59cd9a35af57e618af9f88efe9/config.json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x149a1721a720>, 'Connection to huggingface.co timed out. (connect timeout=10)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1546, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1463, in get_hf_file_metadata
+    r = _request_wrapper(
+        ^^^^^^^^^^^^^^^^^
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 286, in _request_wrapper
+    response = _request_wrapper(
+               ^^^^^^^^^^^^^^^^^
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 309, in _request_wrapper
+    response = http_backoff(method=method, url=url, **params, retry_on_exceptions=(), retry_on_status_codes=(429,))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/site-packages/huggingface_hub/utils/_http.py", line 310, in http_backoff
+    response = session.request(method=method, url=url, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/site-packages/huggingface_hub/utils/_http.py", line 96, in send
+    return super().send(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/site-packages/requests/adapters.py", line 665, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: (MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /smp-hub/resnet50.imagenet/resolve/00cb74e366966d59cd9a35af57e618af9f88efe9/config.json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x149a1721a720>, 'Connection to huggingface.co timed out. (connect timeout=10)'))"), '(Request ID: dd352c9b-6d83-4e21-b530-dbda9d6906c1)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/dhumal.a/.local/lib/python3.12/site-packages/segmentation_models_pytorch/encoders/__init__.py", line 126, in get_encoder
+    hf_hub_download(repo_id, filename="config.json", revision=revision)
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1010, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1117, in _hf_hub_download_to_cache_dir
+    _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1661, in _raise_on_head_call_error
+    raise LocalEntryNotFoundError(
+huggingface_hub.errors.LocalEntryNotFoundError: An error happened while trying to locate the file on the Hub and we cannot find the requested files in the local cache. Please check your connection and try again or make sure your Internet connection is on.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/urllib/request.py", line 1344, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/http/client.py", line 1336, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/http/client.py", line 1382, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/http/client.py", line 1331, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/http/client.py", line 1091, in _send_output
+    self.send(msg)
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/http/client.py", line 1035, in send
+    self.connect()
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/http/client.py", line 1470, in connect
+    super().connect()
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/http/client.py", line 1001, in connect
+    self.sock = self._create_connection(
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/socket.py", line 853, in create_connection
+    raise exceptions[0]
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/socket.py", line 838, in create_connection
+    sock.connect(sa)
+OSError: [Errno 99] Cannot assign requested address
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dhumal.a/brain_seg_hpc/train.py", line 62, in <module>
+    model = smp.Unet(
+            ^^^^^^^^^
+  File "/home/dhumal.a/.local/lib/python3.12/site-packages/segmentation_models_pytorch/base/hub_mixin.py", line 153, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dhumal.a/.local/lib/python3.12/site-packages/segmentation_models_pytorch/decoders/unet/model.py", line 132, in __init__
+    self.encoder = get_encoder(
+                   ^^^^^^^^^^^^
+  File "/home/dhumal.a/.local/lib/python3.12/site-packages/segmentation_models_pytorch/encoders/__init__.py", line 138, in get_encoder
+    state_dict = load_url(url, map_location="cpu")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dhumal.a/.local/lib/python3.12/site-packages/torch/hub.py", line 880, in load_state_dict_from_url
+    download_url_to_file(url, cached_file, hash_prefix, progress=progress)
+  File "/home/dhumal.a/.local/lib/python3.12/site-packages/torch/hub.py", line 736, in download_url_to_file
+    with urlopen(req) as u:
+         ^^^^^^^^^^^^
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/urllib/request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/urllib/request.py", line 515, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/urllib/request.py", line 532, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/urllib/request.py", line 1392, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/urllib/request.py", line 1347, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno 99] Cannot assign requested address>

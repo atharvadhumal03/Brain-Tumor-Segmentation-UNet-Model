@@ -1,0 +1,46 @@
+========================================
+Brain Tumor Segmentation Training
+Date: Mon Feb 23 15:10:39 EST 2026
+Node: c2205
+Job ID: 4542389
+========================================
+
+GPU Info:
+Mon Feb 23 15:10:41 2026       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 545.23.08              Driver Version: 545.23.08    CUDA Version: 12.3     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  Tesla V100-PCIE-32GB           On  | 00000000:41:00.0 Off |                    0 |
+| N/A   36C    P0              27W / 250W |      0MiB / 32768MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+
+Starting training...
+========================================
+Using device: cuda
+Loading dataset...
+Found 3929 image-mask pairs
+Total patients: 110
+Train: 76 | Val: 17 | Test: 17
+Found 2607 image-mask pairs
+Found 704 image-mask pairs
+Found 618 image-mask pairs
+
+Initializing model...
+Downloading: "https://download.pytorch.org/models/resnet50-19c8e357.pth" to /home/dhumal.a/.cache/torch/hub/checkpoints/resnet50-19c8e357.pth
+
+========================================
+Training finished at Mon Feb 23 15:21:10 EST 2026
+========================================

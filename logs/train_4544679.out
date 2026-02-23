@@ -1,0 +1,144 @@
+========================================
+Brain Tumor Segmentation Training
+Date: Mon Feb 23 03:43:29 PM EST 2026
+Node: c2204
+Job ID: 4544679
+========================================
+
+GPU Info:
+Mon Feb 23 15:43:31 2026       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 545.23.08              Driver Version: 545.23.08    CUDA Version: 12.3     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  Tesla V100-PCIE-32GB           On  | 00000000:41:00.0 Off |                    0 |
+| N/A   38C    P0              26W / 250W |      0MiB / 32768MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+
+Starting training...
+========================================
+Using device: cuda
+Loading dataset...
+Found 3929 image-mask pairs
+Total patients: 110
+Train: 76 | Val: 17 | Test: 17
+Found 2660 image-mask pairs
+Found 630 image-mask pairs
+Found 639 image-mask pairs
+
+Initializing model...
+Model: U-Net with ResNet50 encoder
+Total parameters: 32,521,105
+
+==================================================
+Starting Training
+==================================================
+
+Epoch 1/20
+Train Loss: 0.9465 | Train Dice: 0.1529
+Val Loss: 0.6675 | Val Dice: 0.1590
+✓ Saved best model (Dice: 0.1590)
+
+Epoch 2/20
+Train Loss: 0.8424 | Train Dice: 0.3980
+Val Loss: 0.6123 | Val Dice: 0.2270
+✓ Saved best model (Dice: 0.2270)
+
+Epoch 3/20
+Train Loss: 0.6302 | Train Dice: 0.5911
+Val Loss: 0.5109 | Val Dice: 0.2732
+✓ Saved best model (Dice: 0.2732)
+
+Epoch 4/20
+Train Loss: 0.4425 | Train Dice: 0.6547
+Val Loss: 0.5340 | Val Dice: 0.2087
+
+Epoch 5/20
+Train Loss: 0.3842 | Train Dice: 0.6608
+Val Loss: 0.5494 | Val Dice: 0.1887
+
+Epoch 6/20
+Train Loss: 0.3311 | Train Dice: 0.6984
+Val Loss: 0.4338 | Val Dice: 0.3016
+✓ Saved best model (Dice: 0.3016)
+
+Epoch 7/20
+Train Loss: 0.2993 | Train Dice: 0.7217
+Val Loss: 0.4054 | Val Dice: 0.3290
+✓ Saved best model (Dice: 0.3290)
+
+Epoch 8/20
+Train Loss: 0.2890 | Train Dice: 0.7195
+Val Loss: 0.3780 | Val Dice: 0.3538
+✓ Saved best model (Dice: 0.3538)
+
+Epoch 9/20
+Train Loss: 0.2720 | Train Dice: 0.7401
+Val Loss: 0.3983 | Val Dice: 0.3315
+
+Epoch 10/20
+Train Loss: 0.2930 | Train Dice: 0.7167
+Val Loss: 0.4599 | Val Dice: 0.2675
+
+Epoch 11/20
+Train Loss: 0.2866 | Train Dice: 0.7218
+Val Loss: 0.4045 | Val Dice: 0.3239
+
+Epoch 12/20
+Train Loss: 0.2623 | Train Dice: 0.7449
+Val Loss: 0.3932 | Val Dice: 0.3346
+
+Epoch 13/20
+Train Loss: 0.2666 | Train Dice: 0.7388
+Val Loss: 0.3472 | Val Dice: 0.3808
+✓ Saved best model (Dice: 0.3808)
+
+Epoch 14/20
+Train Loss: 0.2582 | Train Dice: 0.7466
+Val Loss: 0.3720 | Val Dice: 0.3546
+
+Epoch 15/20
+Train Loss: 0.2487 | Train Dice: 0.7555
+Val Loss: 0.3758 | Val Dice: 0.3508
+
+Epoch 16/20
+Train Loss: 0.2275 | Train Dice: 0.7704
+Val Loss: 0.3400 | Val Dice: 0.3870
+✓ Saved best model (Dice: 0.3870)
+
+Epoch 17/20
+Train Loss: 0.2393 | Train Dice: 0.7640
+Val Loss: 0.3581 | Val Dice: 0.3685
+
+Epoch 18/20
+Train Loss: 0.2473 | Train Dice: 0.7502
+Val Loss: 0.3847 | Val Dice: 0.3417
+
+Epoch 19/20
+Train Loss: 0.2368 | Train Dice: 0.7663
+Val Loss: 0.3922 | Val Dice: 0.3339
+
+Epoch 20/20
+Train Loss: 0.2297 | Train Dice: 0.7727
+Val Loss: 0.3746 | Val Dice: 0.3515
+
+==================================================
+Training Complete!
+Best Val Dice Score: 0.3870
+==================================================
+
+========================================
+Training finished at Mon Feb 23 04:00:39 PM EST 2026
+========================================

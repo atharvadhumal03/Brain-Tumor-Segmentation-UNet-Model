@@ -2,6 +2,4 @@ myVenv/
 data/
 .DS_Store
 src/__pycache__/
-logs/
-*.out
-*.err
+brain_seg_hpc/

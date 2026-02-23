@@ -1,0 +1,50 @@
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.2.6 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "/home/dhumal.a/brain_seg_hpc/train.py", line 5, in <module>
+    from sklearn.model_selection import train_test_split
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/site-packages/sklearn/__init__.py", line 87, in <module>
+    from .base import clone
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/site-packages/sklearn/base.py", line 19, in <module>
+    from .utils import _IS_32BIT
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/site-packages/sklearn/utils/__init__.py", line 16, in <module>
+    from scipy.sparse import issparse
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/site-packages/scipy/sparse/__init__.py", line 295, in <module>
+    from ._csr import *
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/site-packages/scipy/sparse/_csr.py", line 11, in <module>
+    from ._sparsetools import (csr_tocsc, csr_tobsr, csr_count_blocks,
+Traceback (most recent call last):
+  File "/home/dhumal.a/.local/lib/python3.12/site-packages/numpy/core/_multiarray_umath.py", line 44, in __getattr__
+    raise ImportError(msg)
+ImportError: 
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.2.6 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+
+Traceback (most recent call last):
+  File "/home/dhumal.a/brain_seg_hpc/train.py", line 5, in <module>
+    from sklearn.model_selection import train_test_split
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/site-packages/sklearn/__init__.py", line 87, in <module>
+    from .base import clone
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/site-packages/sklearn/base.py", line 19, in <module>
+    from .utils import _IS_32BIT
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/site-packages/sklearn/utils/__init__.py", line 16, in <module>
+    from scipy.sparse import issparse
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/site-packages/scipy/sparse/__init__.py", line 295, in <module>
+    from ._csr import *
+  File "/shared/EL9/explorer/anaconda3/2024.06/lib/python3.12/site-packages/scipy/sparse/_csr.py", line 11, in <module>
+    from ._sparsetools import (csr_tocsc, csr_tobsr, csr_count_blocks,
+ImportError: numpy.core.multiarray failed to import

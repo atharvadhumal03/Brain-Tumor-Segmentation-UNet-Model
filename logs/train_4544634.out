@@ -1,0 +1,45 @@
+========================================
+Brain Tumor Segmentation Training
+Date: Mon Feb 23 03:38:19 PM EST 2026
+Node: c2204
+Job ID: 4544634
+========================================
+
+GPU Info:
+Mon Feb 23 15:38:21 2026       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 545.23.08              Driver Version: 545.23.08    CUDA Version: 12.3     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  Tesla V100-PCIE-32GB           On  | 00000000:41:00.0 Off |                    0 |
+| N/A   40C    P0              27W / 250W |      0MiB / 32768MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+
+Starting training...
+========================================
+Using device: cuda
+Loading dataset...
+Found 3929 image-mask pairs
+Total patients: 110
+Train: 76 | Val: 17 | Test: 17
+Found 2682 image-mask pairs
+Found 534 image-mask pairs
+Found 713 image-mask pairs
+
+Initializing model...
+
+========================================
+Training finished at Mon Feb 23 03:39:37 PM EST 2026
+========================================
