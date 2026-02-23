@@ -61,7 +61,7 @@ test_loader = DataLoader(test_dataset, batch_size=BATCH_SIZE, shuffle=False, num
 print("\nInitializing model...")
 model = smp.Unet(
     encoder_name="resnet50",
-    encoder_weights=None, # changed from "imagenet" --> None
+    encoder_weights="imagenet",
     in_channels=3,
     classes=1,
 )
